@@ -9,7 +9,7 @@ uiautomator
 [![pypi](https://img.shields.io/pypi/v/uiautomator.svg)](https://pypi.python.org/pypi/uiautomator)
 [![downloads](https://img.shields.io/pypi/dm/uiautomator.svg)](https://pypi.python.org/pypi/uiautomator)
 
-This module is a Python wrapper of Android [uiautomator][] testing framework. It works on Android 4.1+ (API Level 16~30)
+This module is a Python wrapper of Android [uiautomator][] testing framework. It works on Android 4.1+. suport API Level [16, 30]
 simply with Android device attached via adb, no need to install anything on Android device.
 
 ```python
@@ -72,7 +72,7 @@ d(text="Clock").click()
 **[Selector introduction ](#selector)** 
   - **[How to selector the Child and sibling UI object](#child-and-sibling-ui-object)**
   - **[Get the specific UI object status and its information](#get-the-selected-ui-object-status-and-its-information)**
-  - **[Perform the click action on the seleted UI object](#perform-the-click-action-on-the-seleted-ui-object)**
+  - **[Perform the click action on the selected UI object](#perform-the-click-action-on-the-selected-ui-object)**
   - **[Gesture action for the specific ui object](#gesture-action-for-the-specific-ui-object)**
 
 ### Basic API Usages
@@ -103,6 +103,7 @@ This part show the normal actions of the device through some simple examples.
 #### Key Event Actions of the device
 
 * Turn on/off screen
+
 
   ```python
   # Turn on screen
@@ -371,7 +372,7 @@ d.handlers.off(fc_close)
 Selector is to identify specific ui object in current window.
 
 ```python
-# To seleted the object ,text is 'Clock' and its className is 'android.widget.TextView'
+# To selected the object ,text is 'Clock' and its className is 'android.widget.TextView'
 d(text='Clock', className='android.widget.TextView')
 ```
 
@@ -555,7 +556,7 @@ Selector supports below parameters. Refer to [UiSelector java doc](http://develo
   d(text="Settings").set_text("My text...")  # set the text
   ```
 
-#### Perform the click action on the seleted ui object
+#### Perform the click action on the selected ui object
 
 * Perform click on the specific ui object
 
@@ -726,7 +727,6 @@ If you have any bug reports or annoyances please report them to our issue tracke
 ## FAQ
 
 - Could not start JSONRPC server: `raise IOError("RPC server not started!")`
-
     It may be caused by network, device, or environment. So when you meet the issue, please follow below steps and try to manually start the JSONRPC server.
 
     1. Follow steps at [uiautomator-jsonrpc-server](https://github.com/xiaocong/android-uiautomator-server#build) to start jsonrpc server.
